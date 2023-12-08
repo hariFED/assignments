@@ -105,10 +105,6 @@ class Calculator {
   }
 }
 
-// Test the Calculator class
-const calculator = new Calculator();
-calculator.calculate("10 + 2 * (6 - (4 + 1) / 2) + 7");
-console.log("Result:", calculator.getResult());
 
 
 module.exports = Calculator;

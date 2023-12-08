@@ -5,6 +5,24 @@
 */
 
 function isAnagram(str1, str2) {
+  str1.toLowerCase()
+  str2.toLowerCase()
+  if (str1.length !== str2.length) {
+
+    return false
+  }
+  let val = 0;
+  for (let i = 0; i < str1.length; i++) {
+    str2.includes(str1[i]) ? val += 1 : val -= 1;
+
+  }
+  if (val === str1.length) {
+    return true
+  }
+  else {
+    return false
+  }
+
 
 }
 

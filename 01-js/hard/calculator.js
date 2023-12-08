@@ -16,6 +16,99 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor() {
+    this.result = 0;
+  }
+
+  add(num) {
+    this.result += num;
+  }
+
+  subtract(num) {
+    this.result -= num;
+  }
+
+  multiply(num) {
+    this.result *= num;
+  }
+
+  divide(num) {
+    if (num === 0) {
+      throw new Error("Cannot divide by zero");
+    }
+    this.result /= num;
+  }
+
+  clear() {
+    this.result = 0;
+  }
+
+  getResult() {
+    return this.result;
+  }
+
+  calculate(expression) {
+    const tokens = this.tokenize(expression);
+    const parsedExpression = this.parse(tokens);
+    this.result = this.evaluate(parsedExpression);
+  }
+
+  tokenize(expression) {
+    const regex = /\d+\.?\d*|[+\-*/()]/g;
+    return expression.match(regex) || [];
+  }
+
+  parse(tokens) {
+    let index = 0;
+
+    function parseExpression() {
+      let left = parseTerm();
+      while (index < tokens.length && (tokens[index] === '+' || tokens[index] === '-')) {
+        const operator = tokens[index++];
+        const right = parseTerm();
+        left = operator === '+' ? left + right : left - right;
+      }
+      return left;
+    }
+
+    function parseTerm() {
+      let left = parseFactor();
+      while (index < tokens.length && (tokens[index] === '*' || tokens[index] === '/')) {
+        const operator = tokens[index++];
+        const right = parseFactor();
+        left = operator === '*' ? left * right : left / right;
+      }
+      return left;
+    }
+
+    function parseFactor() {
+      if (tokens[index] === '(') {
+        index++;
+        const result = parseExpression();
+        if (tokens[index++] !== ')') {
+          throw new Error("Invalid expression: mismatched parentheses");
+        }
+        return result;
+      } else if (/^\d+\.?\d*$/.test(tokens[index])) {
+        return parseFloat(tokens[index++]);
+      } else {
+        throw new Error("Invalid expression");
+      }
+    }
+
+    return parseExpression();
+  }
+
+  evaluate(parsedExpression) {
+    return parsedExpression;
+  }
+}
+
+// Test the Calculator class
+const calculator = new Calculator();
+calculator.calculate("10 + 2 * (6 - (4 + 1) / 2) + 7");
+console.log("Result:", calculator.getResult());
+
 
 module.exports = Calculator;

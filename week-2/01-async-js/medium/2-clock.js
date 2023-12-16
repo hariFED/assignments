@@ -26,17 +26,27 @@ function clockTwevel() {
 
 }
 
-setInterval(clock, 1000)
+setInterval(clockTwevel, 1000)
 
 function clockTwentyFour() {
     const theDay = new Date;
-    const hour = addZero(theDay.getHours())
+    let hour = addZero(theDay.getHours())
     const mintue = addZero(theDay.getMinutes())
     const seconds = addZero(theDay.getSeconds())
+
+    let ampm = 'AM';
+    if (hour >= 12) {
+        ampm = 'PM';
+        hour = hour % 12 || 12;
+    }
+
+
+    console.log(`${hour}:${mintue}::${seconds}:${ampm}`)
 }
 
 
-
+setInterval(clockTwentyFour, 1000)
 
 
 clockTwevel()
+clockTwentyFour()

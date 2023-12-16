@@ -1,0 +1,155 @@
+[33mcommit 17b9a9aa59102d047cdde308c99b84b3e6f309f6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: de49fb3 8adc7d9
+Author: Hari haran <109363771+hariFED@users.noreply.github.com>
+Date:   Fri Dec 15 21:25:39 2023 +0530
+
+    Merge branch '100xdevs-cohort-2:master' into master
+
+[33mcommit 8adc7d9c34203d2f907488e1af310cbe05dfd950[m
+Author: Kirat <harkirat96@gmail.com>
+Date:   Thu Dec 14 15:13:22 2023 +0530
+
+    Update README.md
+
+[33mcommit 3661f6b7cb15b9d20fb0445dfab9bc183b5087a1[m
+Author: Kirat <harkirat96@gmail.com>
+Date:   Thu Dec 14 15:13:14 2023 +0530
+
+    Update README.md
+
+[33mcommit a39ff95b395681909e6fa6721382e1bd6578d9de[m
+Author: Harkirat Singh <harkirat96@gmail.com>
+Date:   Wed Dec 13 19:02:40 2023 +0530
+
+    removed all for now
+
+[33mcommit 02356bdb76c019323d3d0d955fdc488bfd422ed5[m
+Author: Harkirat Singh <harkirat96@gmail.com>
+Date:   Wed Dec 13 17:50:48 2023 +0530
+
+    added node.js assignments
+
+[33mcommit 0ad4e259c609d35b91caa1d6295f5e519e1ca181[m
+Author: Harkirat Singh <harkirat96@gmail.com>
+Date:   Sun Dec 10 18:03:41 2023 +0530
+
+    fixed duration
+
+[33mcommit bab0a55ec7fae793f40e64a1850416ac72b6a688[m
+Merge: ae39c3e 01399d6
+Author: Kirat <harkirat96@gmail.com>
+Date:   Sun Dec 10 18:00:38 2023 +0530
+
+    Merge pull request #271 from me-imfhd/add-tests
+    
+    Adds tests
+
+[33mcommit 01399d697c9f02e6eb20fbe369dfcf0608e7dd98[m
+Author: Fahad Ahmad <fahadahmad63862@gmail.com>
+Date:   Sun Dec 10 17:50:27 2023 +0530
+
+    incorrect filename O5-Object.js renamed with 05-Object.js
+
+[33mcommit 21a1431983660394e1be45f2572268accccfbb27[m
+Author: Fahad Ahmad <fahadahmad63862@gmail.com>
+Date:   Sun Dec 10 17:48:22 2023 +0530
+
+    added readme and aliases on how to run tests
+
+[33mcommit 35f9ac6c4d495523811081a6e69b53fd6ac027a7[m
+Author: Fahad Ahmad <fahadahmad63862@gmail.com>
+Date:   Sun Dec 10 16:58:00 2023 +0530
+
+    small fix
+
+[33mcommit 31e45f9919ae5b3885de4ca0eff8bab14ec03caf[m
+Author: Fahad Ahmad <fahadahmad63862@gmail.com>
+Date:   Sun Dec 10 16:52:22 2023 +0530
+
+    added tests for hard(promises) assignments
+
+[33mcommit 74439726122fd17140c4dcb7b16f11d47aad0042[m
+Author: Fahad Ahmad <fahadahmad63862@gmail.com>
+Date:   Sun Dec 10 16:51:50 2023 +0530
+
+    modified hard(promises) assignments
+
+[33mcommit 7be6f4edabe56ea86ebc9302b7daa327db459351[m
+Author: Fahad Ahmad <fahadahmad63862@gmail.com>
+Date:   Sun Dec 10 16:50:47 2023 +0530
+
+    initalized jest
+
+[33mcommit ae39c3e25a755ce8724b7d860ca3447ca547c4dc[m
+Author: Harkirat Singh <harkirat96@gmail.com>
+Date:   Sat Dec 9 18:19:21 2023 +0530
+
+    Added week-2
+
+[33mcommit de49fb3429677dadf5ff6c10f40693d740a528ca[m
+Author: Hariharan <109363771+hariFED@users.noreply.github.com>
+Date:   Fri Dec 8 10:07:03 2023 +0530
+
+    update
+
+[33mcommit 9c62bf98069dcc1f8aab47afd68310e4229a48e2[m
+Author: Hariharan <109363771+hariFED@users.noreply.github.com>
+Date:   Fri Dec 8 10:04:34 2023 +0530
+
+    Code Completed
+
+[33mcommit ac759a4e6957da64e469ae81903d7e6f0a7374ff[m
+Merge: 336a3db be3675f
+Author: Kirat <harkirat96@gmail.com>
+Date:   Thu Dec 7 17:27:19 2023 +0530
+
+    Merge pull request #156 from lokesh3097/patch-1
+    
+    Fix: Made the expenditure-analysis question a bit clear
+
+[33mcommit be3675fccce186c14abc33d63e0d6ccf70ec079d[m
+Author: Lokeshwar Reddy Jonnalagadda <10lokeshnani@gmail.com>
+Date:   Thu Dec 7 16:58:33 2023 +0530
+
+    Update expenditure-analysis.js
+
+[33mcommit 07beef684493f7205ee2dd330a2a62f8f6232437[m
+Author: Lokeshwar Reddy Jonnalagadda <10lokeshnani@gmail.com>
+Date:   Thu Dec 7 16:56:06 2023 +0530
+
+    Fix expenditure-analysis.js
+
+[33mcommit 336a3db4da3fca6d52d718df579a6694c79bda99[m
+Author: Harkirat Singh <harkirat96@gmail.com>
+Date:   Tue Dec 5 23:27:52 2023 +0530
+
+    moved things around
+
+[33mcommit e5cceb3a73bff1485a0540cbd3a9efe6ae7317e3[m
+Author: Harkirat Singh <harkirat96@gmail.com>
+Date:   Tue Dec 5 23:01:14 2023 +0530
+
+    offline-class
+
+[33mcommit cf59b6a5592f9567896e1611537158f921e899f2[m
+Merge: 539ab3e 604e50e
+Author: Kirat <harkirat96@gmail.com>
+Date:   Mon Dec 4 08:52:41 2023 +0530
+
+    Merge pull request #1 from sahilsuman933/vowel-testcase
+    
+    [Bug] Fixed countVowels Test cases.
+
+[33mcommit 604e50e027f9d502c6e2b5080091792e4b09f220[m
+Author: Sahil Suman <sahilsuman933@gmail.com>
+Date:   Mon Dec 4 01:44:21 2023 +0530
+
+    Fixed countVowels Test cases.
+    
+    Signed-off-by: Sahil Suman <sahilsuman933@gmail.com>
+
+[33mcommit 539ab3edc4de3c5ed708b51ee6e7ddc13deb7dea[m
+Author: Harkirat Singh <harkirat96@gmail.com>
+Date:   Sun Dec 3 23:29:40 2023 +0530
+
+    Init

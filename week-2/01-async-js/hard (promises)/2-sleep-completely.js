@@ -5,6 +5,17 @@
  */
 
 function sleep(milliseconds) {
+    const start = Date.now();
+    while (Date.now() - start < milliseconds) {
+        // Busy wait
+    }
+
+    return Promise.resolve("The issue is done")
+
+
+
 }
+
+
 
 module.exports = sleep;

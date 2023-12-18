@@ -17,5 +17,18 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
+app.get("/files", function (req, res) {
+  res.status(200).json({
+    Message: "with an array of file names in JSON format"
+  })
+})
+
+app.get("/files", function (req, res) {
+  res.status(200).json({
+    Message: "with an array of file names in JSON format"
+  })
+})
+
+
 
 module.exports = app;

@@ -12,16 +12,42 @@ const app = express();
 // clears every one second
 
 let numberOfRequestsForUser = {};
-setInterval(() => {
-    numberOfRequestsForUser = {};
-}, 1000)
 
-app.get('/user', function(req, res) {
+
+
+function rateLimitterMiddleware(req, res, next) {
+
+  const userHeaderId = req.headers['user-id']
+  //console.log(userHeaderId)
+
+  if (numberOfRequestsForUser[userHeaderId] === undefined || numberOfRequestsForUser[userHeaderId] === null) {
+    numberOfRequestsForUser[userHeaderId] = 0
+  }
+  numberOfRequestsForUser[userHeaderId]++
+  if (numberOfRequestsForUser[userHeaderId] >= 5) {
+    res.status(404).send(`Hello ${userHeaderId} your maximum limit reached try again after 1 second`)
+    setInterval(() => {
+      numberOfRequestsForUser = {};
+    }, 1000)
+    return
+  }
+
+
+  //console.log(numberOfRequestsForUser)
+  next()
+
+}
+app.use(rateLimitterMiddleware)
+
+app.get('/user', function (req, res) {
   res.status(200).json({ name: 'john' });
 });
 
-app.post('/user', function(req, res) {
+app.post('/user', function (req, res) {
   res.status(200).json({ msg: 'created dummy user' });
 });
 
+//app.listen(8000)
 module.exports = app;
+
+

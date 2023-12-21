@@ -15,7 +15,22 @@ const jwtPassword = 'secret';
  */
 function signJwt(username, password) {
     // Your code here
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(username)) {
+
+        return null
+    }
+    if (password.length < 6) {
+
+        return null
+    }
+
+    const token = jwt.sign({ username, password }, jwtPassword)
+
+    return token
 }
+
 
 /**
  * Verifies a JWT using a secret key.
@@ -27,7 +42,18 @@ function signJwt(username, password) {
  */
 function verifyJwt(token) {
     // Your code here
+    try {
+        const user = jwt.verify(token, jwtPassword)
+        return true
+    } catch (error) {
+        return false
+    }
+
+
+
+
 }
+
 
 /**
  * Decodes a JWT to reveal its payload without verifying its authenticity.
@@ -38,12 +64,23 @@ function verifyJwt(token) {
  */
 function decodeJwt(token) {
     // Your code here
+
+    const decode = jwt.decode(token)
+
+    if (decode === null) {
+        return false
+    }
+    else {
+        return true
+    }
+
+
+
 }
 
-
 module.exports = {
-  signJwt,
-  verifyJwt,
-  decodeJwt,
-  jwtPassword,
+    signJwt,
+    verifyJwt,
+    decodeJwt,
+    jwtPassword,
 };

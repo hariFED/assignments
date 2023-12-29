@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 
 // User Routes
-app.post('/signup', (req, res) => {
+router.post('/signup', (req, res) => {
     // Implement user signup logic
     User.create({
         username: req.body.username,
@@ -18,7 +18,7 @@ app.post('/signup', (req, res) => {
 
 });
 
-app.get('/courses', (req, res) => {
+router.get('/courses', (req, res) => {
     // Implement listing all courses logic
     Course.find().then(courses => {
         res.json({
@@ -27,11 +27,13 @@ app.get('/courses', (req, res) => {
     })
 });
 
-app.post('/courses/:courseId', userMiddleware, (req, res) => {
+router.post('/courses/:courseId', userMiddleware, (req, res) => {
     // Implement course purchase logic
 
 });
 
-app.get('/purchasedCourses', userMiddleware, (req, res) => {
+router.get('/purchasedCourses', userMiddleware, (req, res) => {
     // Implement fetching purchased courses logic
 });
+
+module.exports = router
